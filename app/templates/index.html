@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Include Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lekton:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Include Developer Stylings -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css') }}">
+
+    <title>Welcome</title>
+</head>
+<body>
+    <div class="daily-container">
+        <div class="meetings-container">
+
+            {% for event in todays_events %}
+
+                <div class="event-card">
+                    <span class="event-time">{{ event[0] }}</span>
+                    <a href=" {{ event[2] }} " class="event-title">{{ event[1] }}</a>
+                </div>
+
+            {% endfor %}
+
+        </div>
+
+        <div class="date-time-container">
+            <p class="print-date">
+                <span id="day">day</span> <span id="date">date</span> <span id="month">month</span>
+            </p>
+            <p class="print-time">
+                <span id="hour">Hour</span>:<span id="min">Min</span>
+            </p>
+        </div>
+
+    </div>
+
+<!-- Include Developer JS -->
+<script src="{{ url_for('static', filename='js/dateandtime.js') }}"></script>
+
+</body>
+</html>

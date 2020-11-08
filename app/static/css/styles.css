@@ -1,0 +1,123 @@
+body {
+    box-sizing: border-box;
+    /* height: 100vh; */
+    margin: 0;
+    padding: 2rem;
+    background: url('/static/img/japanese-street.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    /* background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center center; */
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link, a:visited{
+    color: whitesmoke;
+}
+
+a:hover{
+    color: greenyellow;
+}
+
+.daily-container {
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 5rem;
+    /* border: 4px solid white; */
+    color: whitesmoke;
+}
+
+.meetings-container {
+    padding-right: 6rem;
+    height: 50%;
+    overflow-y: scroll;
+}
+
+.meetings-container:hover {
+    cursor: pointer;
+}
+
+.event-card {
+    width: 35rem;
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    background-color: black;
+    font-family: 'Nunito', sans-serif;
+}
+
+.event-card:nth-child(odd){
+    border: 3px solid #357bff;
+}
+
+.event-card:nth-child(even){
+    border: 3px solid #ff6972;
+}
+
+/* .blue-card {
+    border: 3px solid #357bff;
+}
+
+.pink-card {
+    border: 3px solid #ff6972;
+} */
+
+.event-time {
+    width: 20%;
+}
+
+.event-title {
+    width: 80%;
+    text-align: center;
+}
+
+.date-time-container {
+    margin-right: 3rem;
+    margin-top: 8rem;
+    font-family: 'Lekton', sans-serif;
+}
+
+.print-date {
+    font-size: 26px;
+    margin: 0.1rem;
+}
+
+.print-time {
+    font-size: 80px;
+    margin: 0.1rem;
+}
+
+/* width */
+::-webkit-scrollbar {
+    display: none;
+  }
+  
+  Track
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    background-color: lightgrey;
+    border-radius: 8px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    background-color: #555;
+    border-radius: 8px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    border-radius: 8px;
+  }
