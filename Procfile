@@ -1,1 +1,1 @@
-web: gunicorn splash.py:app
+web: gunicorn splash:app
